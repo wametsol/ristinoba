@@ -51,9 +51,12 @@
             <version>0.30</version>
             <configuration>
         <targetClasses>
-            
+            <param>ristinollaharkka.ristinolla.Pelaaja*</param>
+            <param>ristinollaharkka.ristinolla.Peli*</param>
         </targetClasses>
         <targetTests>
+            <param>ristinollaharkka.ristinolla.Pelaaja*</param>
+            <param>ristinollaharkka.ristinolla.Peli*</param>
             
         </targetTests>
     </configuration>
