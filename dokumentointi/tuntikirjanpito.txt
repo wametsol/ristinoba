@@ -4,3 +4,30 @@ TUNTIKIRJANPITO
 Päätin aiheen, tein tarvittavat esivalmistelut ja aloin pohtimaan toteutusta. 
 Kesto noin kaksi tuntia.
 -----------------
+19.1.2014
+Luokkakaavion teko, sekä yleistä suunnittelua. 
+Kesto noin tunnin.
+-----------------
+20.1.2014
+Aloitin koodin kirjottamisen. Vaikka tarkoitus ja idea oli lähteä liikkeelle ohjelmalogiikasta yms.
+päätin silti lähteä liikkeelle vähän käyttöliittymän puolelta, jotta eteneminen, ainakin omasta mielestä,
+on helpompaa.
+Kesto noin 3-4 tuntia.
+-----------------
+23.1.2014
+Jatkoin koodin työstöä testien osalta ja lisäsin ne GitHubiin.
+Kesto noin 2 tuntia.
+-----------------
+27.1.2014
+Jatkoin koodin kirjoittamista sääntöjen ja XOnapin osalta.
+Noin 2 tuntia.
+-----------------
+29.1.2014
+Jatkoin siitä mihin viimeksi jäin, eli sääntöjen ja XOnapin työstöön. Peli toimii nyt helpolla tasolla,
+ja suunnittelin miten toteutan normaalin ja vaikean tason säännöt.
+Kesto noin 4 tuntia.
+-----------------
+30.1.2014
+Pohtimista miten testata luokkien toimintaa fiksusti...
+Palautus
+-----------------

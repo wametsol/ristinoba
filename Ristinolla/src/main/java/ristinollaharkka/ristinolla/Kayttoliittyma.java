@@ -49,22 +49,21 @@ public class Kayttoliittyma {
         paneeli.add(tokapelaaja);
         
         JPanel alaPaneeli = new JPanel(new GridLayout(1, 3));
+        
         JButton helppo = new JButton("Helppo(3)");
         JButton normaali = new JButton("Normaali(4)");
         JButton vaikea = new JButton("Vaikea(5)");
+        
         NapinKuuntelija kuuntelija = new NapinKuuntelija(ekapelaaja, tokapelaaja, helppo, vaikea, normaali);
+        
         helppo.addActionListener(kuuntelija);
         normaali.addActionListener(kuuntelija);
         vaikea.addActionListener(kuuntelija);
+        
         alaPaneeli.add(helppo);
         alaPaneeli.add(normaali);
         alaPaneeli.add(vaikea);
         
-        
-//        container.add(ekaPelaaja);
-//        container.add(pelaajaX);
-//        container.add(tokaPelaaja);
-//        container.add(pelaajaO);
         container.add(paneeli, BorderLayout.NORTH);
         container.add(alaPaneeli, BorderLayout.SOUTH);
     }
