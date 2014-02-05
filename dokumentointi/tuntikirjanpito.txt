@@ -31,3 +31,7 @@ Kesto noin 4 tuntia.
 Pohtimista miten testata luokkien toimintaa fiksusti...
 Palautus
 -----------------
+5.2.2014
+Sääntöjen viimeistely, peli toimii nyt kolmella tasolla (pieniä ongelmia lukuunottamatta).
+Käyttöliittymän työstöä.
+Kesto noin 4 tuntia.
