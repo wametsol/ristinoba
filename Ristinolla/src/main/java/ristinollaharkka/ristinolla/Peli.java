@@ -23,6 +23,10 @@ public class Peli extends JFrame {
         this.kaksi = kaksi;
     }
     
+    /**
+     * Metodi luo peliin ikkunan ja kutsuu luoKomponentit -metodia.
+     * 
+     */
     public void luoPeli(){
     frame = new JFrame("Pelaaja X: " + this.yksi + ", Pelaaja O: " + this.kaksi + ".");
         frame.setPreferredSize(new Dimension(800, 800));
@@ -38,7 +42,11 @@ public class Peli extends JFrame {
    
     
         }
-    
+        /**Metodi luo ikkunaan painikkeet pelille, riippuen vaikeusasteesta.
+         * Metodi luo XONappeja, jotka painettaessa luovat nappiin X:n tai O:n.
+         * 
+         * @param container 
+         */
         public void luoKomponentit(Container container){
             this.nappeja = new XONappi[144];
             if (vaikeus == 3){
@@ -77,7 +85,9 @@ public class Peli extends JFrame {
             
            
         }
-        
+        /**
+         * Riippuen vaikeusasteesta, metodi kutsuu tarkista-metodeja.
+         */
         public void tarkistaVoittaja(){
             if(vaikeus == 3){
                 tarkistaHelppo();
@@ -90,7 +100,10 @@ public class Peli extends JFrame {
             }
             
         }
-        
+        /**
+         * Metodi tarkistaa helpon vaikeusasteen (3x3) ja ilmoittaa voittajan.
+         * 
+         */
         public void tarkistaHelppo(){
             int i = 0;
             String voittaja = "";
@@ -189,7 +202,9 @@ public class Peli extends JFrame {
             }
             
         }
-        
+        /**
+         * Metodi tarkistaa normaalin (8x8) vaikeusasteen ja ilmoittaa voittajan.
+         */
         public void tarkistaNormaali(){
             int i = 0;
             int u = 0;
@@ -291,6 +306,9 @@ public class Peli extends JFrame {
                 i++;
             }
         }
+        /**
+         * Metodi tarkistaa vaikean (12x12) vaikeusasteen ja ilmoittaa voittajan.
+         */
         public void tarkistaVaikea(){
             int i = 0;
             int u = 0;
@@ -370,7 +388,11 @@ public class Peli extends JFrame {
                 i++;
             }
         }
-        
+        /**Metodi luo voittoikkunan, ilmoittaa voittajan ja kysyy pelataanko uudelleen, suljetaanko
+         * vai tuodaanko tuloslista.
+         * 
+         * @param pelaaja Voittanut pelaaja
+         */
         public void voittoIkkuna(Pelaaja pelaaja){
             JFrame voittoRuutu = new JFrame("Voittaja: " + pelaaja.pelaajanNimi());
         voittoRuutu.setPreferredSize(new Dimension(400, 300));
