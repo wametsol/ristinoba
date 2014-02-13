@@ -38,17 +38,14 @@ public class NapinKuuntelija implements ActionListener {
         toka = new Pelaaja(pelaajaO.getText());
         
         if(e.getSource() == helppo){
-            //System.out.println("hei");
             Peli easy = new Peli(3, eka, toka);
             easy.luoPeli();
         }
         if (e.getSource() == normaali){
-            //System.out.println("kukka");
             Peli normal = new Peli(4, eka, toka);
             normal.luoPeli();
         }
         if (e.getSource() == vaikea){
-        //System.out.println("moi");
         Peli hard = new Peli(5, eka, toka);
         hard.luoPeli();
         }

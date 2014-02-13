@@ -14,7 +14,7 @@ public class Pelaaja {
     Peli peli;
     public Pelaaja(String tuotuNimi){
         nimi = tuotuNimi;
-        //peli = tuotuPeli;
+        
     }
     /**Metodi palauttaa pelaajan nimen.
      * 

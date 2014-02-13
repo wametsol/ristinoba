@@ -21,21 +21,15 @@ import javax.swing.JButton;
 public class XONappi extends JButton implements ActionListener {
     ImageIcon X,O;
     
-    //private int vuoro;
+    
     Peli peli;
     public XONappi(Peli peli){
-        //this.vuoro = 0;
+        
         X = new ImageIcon("X.png");
         O = new ImageIcon("O.png");
         this.addActionListener(this);
         this.peli = peli;
     }
-    /**Metodi nollaa vuoron
-     * 
-     *  -Vuorot pitää toteuttaa jotenkin muuten.
-     * 
-     */
-    
     /**Kuuntelee napinpainalluksia.
      * 
      * @param e Painettu nappi.
@@ -55,9 +49,7 @@ public class XONappi extends JButton implements ActionListener {
             peli.vaihdaVuoroa();
         }
 
-         //
-//            setText("O");
-//        }
+       
         setText(kirjain);
         peli.tarkistaVoittaja();
         

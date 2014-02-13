@@ -45,3 +45,7 @@ Kesto noin 4 tuntia.
 Dokumentointia yms. 
 Pohtimista miten tehdä parempi algoritmi voittojen tarkistukseen
 Kesto noin 2 tuntia.
+----------------- 
+Tällä viikolla projekti eteni huonommin flunssan takia.
+Tulevana viikonloppuna keskityn koodin siivoamiseen ja testien tekoon.
+-----------------

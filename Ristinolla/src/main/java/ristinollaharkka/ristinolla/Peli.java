@@ -30,8 +30,6 @@ public class Peli extends JFrame {
     public void luoPeli(){
     frame = new JFrame("Pelaaja X: " + this.yksi + ", Pelaaja O: " + this.kaksi + ".");
         frame.setPreferredSize(new Dimension(800, 800));
-        
-        //frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
        
         luoKomponentit(frame.getContentPane());
         
@@ -226,7 +224,7 @@ public class Peli extends JFrame {
                     u = 0;
                 }
                 while(u<64){
-                    
+                    //Tämä uusix
                     if (u>4 && u<8){
                         
                     }
@@ -268,17 +266,6 @@ public class Peli extends JFrame {
                                 }
                         
                     }
-//                    if (u<40){
-//                        if(nappeja[u].getText().equals(kirjain)){
-//                                if(nappeja[u+9].getText().equals(kirjain)){
-//                                    if(nappeja[u+18].getText().equals(kirjain)){
-//                                        if(nappeja[u+27].getText().equals(kirjain)){
-//                                            voittaja = kirjain;
-//                                        }
-//                                    }
-//                                }
-//                            }
-//                        }
                     if ((u>2&&u<7)||(u>10&&u<15)||(u>18&&u<23)||(u>26&&u<31)||(u>32&&u<39)){
                         if(nappeja[u].getText().equals(kirjain)){
                                 if(nappeja[u+7].getText().equals(kirjain)){
@@ -308,14 +295,14 @@ public class Peli extends JFrame {
                         if (voittaja.equals("X") && i == 0){
                             frame.setVisible(false);
                             voittoIkkuna(this.yksi);
-                        System.out.println("Onneksi olkoon " + this.yksi.pelaajanNimi() + "! VOITIT PELIN!");
-                    }
-                    if (voittaja.equals("O") && i == 1){
-                        System.out.println("Onneksi olkoon " + this.kaksi.pelaajanNimi() + "! VOITIT PELIN!");
-                    }
-                i++;
+                            System.out.println("Onneksi olkoon " + this.yksi.pelaajanNimi() + "! VOITIT PELIN!");
+                        }
+                        if (voittaja.equals("O") && i == 1){
+                            System.out.println("Onneksi olkoon " + this.kaksi.pelaajanNimi() + "! VOITIT PELIN!");
+                        }
+                    i++;
+                }
             }
-        }
         /**
          * Metodi tarkistaa vaikean (12x12) vaikeusasteen ja ilmoittaa voittajan.
          */

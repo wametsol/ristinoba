@@ -37,11 +37,11 @@ public class voittoIkkunanNapinKuuntelija implements ActionListener {
             raami.setVisible(false);
             
         }
-        if (e.getSource()==ei){
+        if (e.getSource()==ei){  
             System.exit(0);
         }
         if (e.getSource() == scoret){
-            
+            //todo
         }
     }
     
