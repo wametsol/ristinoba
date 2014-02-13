@@ -35,3 +35,13 @@ Palautus
 Sääntöjen viimeistely, peli toimii nyt kolmella tasolla (pieniä ongelmia lukuunottamatta).
 Käyttöliittymän työstöä.
 Kesto noin 4 tuntia.
+-----------------
+12.2.2014
+Kuvien käyttöönotto sekä vuorojen toiminta. Säätöä käyttöliittymän kanssa sekä pohtimista miten toteuttaa
+"voittojen" tarkistus paremmin.
+Kesto noin 4 tuntia.
+-----------------
+13.2.2014
+Dokumentointia yms. 
+Pohtimista miten tehdä parempi algoritmi voittojen tarkistukseen
+Kesto noin 2 tuntia.
