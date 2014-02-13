@@ -14,7 +14,7 @@ import javax.swing.*;
 public class Peli extends JFrame {
     //public XONappi napit[] = new XONappi[9];
     private Pelaaja yksi, kaksi;
-    private int vaikeus;
+    private int vaikeus, vuoro;
     private JFrame frame;
     private XONappi nappeja[];
     public Peli(int vaikeustaso, Pelaaja yksi, Pelaaja kaksi){
@@ -85,6 +85,15 @@ public class Peli extends JFrame {
             
            
         }
+        public void vaihdaVuoroa(){
+            vuoro++;
+        }
+        public int getVuoro(){
+            return vuoro;
+        }
+        public void nollaaVuoro(){
+        this.vuoro = 0;
+    }
         /**
          * Riippuen vaikeusasteesta, metodi kutsuu tarkista-metodeja.
          */
@@ -112,6 +121,7 @@ public class Peli extends JFrame {
                 if (i == 1){
                     kirjain = "O";
                 }
+                
             if (nappeja[0].getText().equals(kirjain)){
                 if (nappeja[1].getText().equals(kirjain)){
                     if (nappeja[2].getText().equals(kirjain)){
@@ -410,7 +420,7 @@ public class Peli extends JFrame {
         JButton joo = new JButton("Uusi peli");
         JButton ei = new JButton("Sulje");
         JButton scoret = new JButton("Tuloslista (tulossa)");
-        voittoIkkunanNapinKuuntelija kuuntelija = new voittoIkkunanNapinKuuntelija(joo, ei, scoret, voittoRuutu);
+        voittoIkkunanNapinKuuntelija kuuntelija = new voittoIkkunanNapinKuuntelija(joo, ei, scoret, voittoRuutu, this);
         joo.addActionListener(kuuntelija);
         ei.addActionListener(kuuntelija);
         scoret.addActionListener(kuuntelija);

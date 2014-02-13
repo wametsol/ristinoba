@@ -24,6 +24,13 @@ public class Kayttoliittyma {
     public Kayttoliittyma(){
         
     }
+    /**
+     * 
+     * Metodi luo ikkunan, kutsuu luoKomponentit -metodia
+     * ja asettaa ikkunan näkyväksi.
+     *  
+     * 
+     */
     public void run(){
         frame = new JFrame("Ristinolla");
         frame.setPreferredSize(new Dimension(400, 150));
@@ -35,7 +42,12 @@ public class Kayttoliittyma {
         frame.pack();
         frame.setVisible(true);
     }
-    
+    /**
+     * Metodi luo ikkunaan painikkeita ja toiminnallisuutta.
+     * Painikkeiden avulla voidaan siirtyä eteenpäin.
+     * 
+     * @param container 
+     */
     private void luoKomponentit(Container container){
         
         GridLayout layout = new GridLayout(2, 2);

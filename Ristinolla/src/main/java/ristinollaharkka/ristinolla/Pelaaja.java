@@ -16,11 +16,20 @@ public class Pelaaja {
         nimi = tuotuNimi;
         //peli = tuotuPeli;
     }
-    
+    /**Metodi palauttaa pelaajan nimen.
+     * 
+     * @return Palauttaa pelaajan nimen.
+     * 
+     * Turha
+     */
     public String pelaajanNimi(){
         return nimi;
     }
-    
+    /**
+     * Metodi palauttaa pelaajan nimen.
+     * 
+     * @return Pelaajan nimi.
+     */
     @Override
     public String toString(){
         return nimi;

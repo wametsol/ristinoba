@@ -27,7 +27,11 @@ public class NapinKuuntelija implements ActionListener {
         
         
     }
-    
+    /**Metodi lukee nappien painalluksia ja luo pelin valitulla vaikeustasolla.
+     * 
+     * 
+     * @param e Käyttäjän painama nappi.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         eka = new Pelaaja(pelaajaX.getText());
