@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import ristinollaharkka.ristinolla.Pelaaja;
+import logiikka.Pelaaja;
 
 /**
  *
@@ -40,7 +40,7 @@ public class PelaajaTest {
     @Test
     public void konstruktoriAsettaaNimenOikein(){
         Pelaaja olli = new Pelaaja("olli");
-        assertEquals("olli", olli.toString());
+        assertEquals("olli", olli.pelaajanNimi());
     }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

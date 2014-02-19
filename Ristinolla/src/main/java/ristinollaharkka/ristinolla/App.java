@@ -1,5 +1,7 @@
 package ristinollaharkka.ristinolla;
 
+import gui.Kayttoliittyma;
+
 
 
 

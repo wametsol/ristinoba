@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.08" errors="0" skipped="0" tests="1" name="PeliTest">
+<testsuite failures="0" time="1.7" errors="0" skipped="0" tests="21" name="PeliTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin"/>
@@ -60,5 +60,25 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.079" classname="PeliTest" name="konstruktoriLuoPelinOikein"/>
+  <testcase time="0.228" classname="PeliTest" name="tarkistaNormaaliVaakaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.117" classname="PeliTest" name="tarkistaNormaaliPystyEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.169" classname="PeliTest" name="tarkistaNormaaliVinoEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.12" classname="PeliTest" name="tarkistaNormaaliPystyToimii"/>
+  <testcase time="0.128" classname="PeliTest" name="tarkistaNormaaliVainoToimii"/>
+  <testcase time="0.089" classname="PeliTest" name="tarkistaVaikeaVinoToimii"/>
+  <testcase time="0.093" classname="PeliTest" name="tarkistaVaikeaPystyToimii"/>
+  <testcase time="0.085" classname="PeliTest" name="tarkistaVaikeaVaakaToimii"/>
+  <testcase time="0.067" classname="PeliTest" name="tarkistaNormaaliVaakaToimii"/>
+  <testcase time="0.058" classname="PeliTest" name="tarkistaHelppoVinoToimii"/>
+  <testcase time="0.065" classname="PeliTest" name="tarkistaHelppoPystyToimii"/>
+  <testcase time="0.053" classname="PeliTest" name="tarkistaHelppoVaakaToimii"/>
+  <testcase time="0.052" classname="PeliTest" name="tarkistaVoittaminenToimii"/>
+  <testcase time="0.045" classname="PeliTest" name="konstruktoriLuoPelinOikein"/>
+  <testcase time="0.049" classname="PeliTest" name="tarkistaHelppoVaakaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.045" classname="PeliTest" name="tarkistaHelppoPystyEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.046" classname="PeliTest" name="tarkistaHelppoVinoEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.047" classname="PeliTest" name="tarkistaVaikeaPystyEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.048" classname="PeliTest" name="tarkistaVaikeaVaakaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.048" classname="PeliTest" name="tarkistaVaikeaVinoEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.046" classname="PeliTest" name="tarkistaEiVoittojaTyhjallaPelilla"/>
 </testsuite>
