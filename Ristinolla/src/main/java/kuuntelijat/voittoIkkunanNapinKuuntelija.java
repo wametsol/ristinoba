@@ -4,6 +4,8 @@
  */
 package kuuntelijat;
 
+import gui.Pistetilasto;
+import gui.Voittoikkuna;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -16,15 +18,18 @@ import logiikka.Peli;
  */
 public class voittoIkkunanNapinKuuntelija implements ActionListener {
 
-    JButton joo, ei, scoret;
+    JButton ok, joo, ei, scoret;
     JFrame raami;
     Peli peli;
-    public voittoIkkunanNapinKuuntelija(JButton joo, JButton ei, JButton scoret, JFrame frame, Peli peli){
+    Voittoikkuna voittis;
+    public voittoIkkunanNapinKuuntelija(Voittoikkuna voittoikkuna, JButton ok, JButton joo, JButton ei, JButton scoret, JFrame frame, Peli peli){
+        this.ok = ok;
         this.joo = joo;
         this.ei = ei;
         this.scoret = scoret;
         raami = frame;
         this.peli = peli;
+        voittis = voittoikkuna;
         
     }
     /**Kuuntelee napinpainalluksia ja joko luo uuden pelin, sulkee ohjelman tai tuo tuloslistan.
@@ -33,6 +38,9 @@ public class voittoIkkunanNapinKuuntelija implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==ok){
+            voittis.luoIkkuna();
+        }
         if(e.getSource()==joo){
             peli.nollaaVuoro();
             raami.setVisible(false);
@@ -42,7 +50,8 @@ public class voittoIkkunanNapinKuuntelija implements ActionListener {
             System.exit(0);
         }
         if (e.getSource() == scoret){
-            //todo
+            Pistetilasto tilasto = new Pistetilasto();
+            tilasto.luoIkkuna();
         }
     }
     

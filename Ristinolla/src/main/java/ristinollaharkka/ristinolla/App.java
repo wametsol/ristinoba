@@ -1,6 +1,7 @@
 package ristinollaharkka.ristinolla;
 
 import gui.Kayttoliittyma;
+import gui.Pistetilasto;
 
 
 
@@ -15,6 +16,7 @@ public class App
      */
     public static void main( String[] args )
     {
+
        Kayttoliittyma kayttis = new Kayttoliittyma();
        kayttis.run();
     }

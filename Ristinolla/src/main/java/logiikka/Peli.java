@@ -13,18 +13,25 @@ import logiikka.Pelaaja;
 import kuuntelijat.voittoIkkunanNapinKuuntelija;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.*;
 import kuuntelijat.XONappi;
+
 public class Peli extends JFrame {
     //public XONappi napit[] = new XONappi[9];
     private Pelaaja yksi, kaksi;
     private int vaikeus, vuoro;
     private JFrame frame;
     private XONappi nappeja[];
+    private File tiedosto;
     public Peli(int vaikeustaso, Pelaaja yksi, Pelaaja kaksi){
         vaikeus = vaikeustaso;
         this.yksi = yksi;
         this.kaksi = kaksi;
+        tiedosto = new File("scoret.txt");
     }
     
     /**
@@ -38,12 +45,16 @@ public class Peli extends JFrame {
         luoKomponentit(frame.getContentPane());
         
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     
 
    
     
         }
+    public int getVaikeus(){
+        return vaikeus;
+    }
         /**
          * Metodi luo XONapit peli-ikkunaan riipuen valitusta vaikeustasosta.
          * @param container 
@@ -80,6 +91,7 @@ public class Peli extends JFrame {
                 while(i<144){
                     nappeja[i] = new XONappi(this);
                     container.add(nappeja[i]);
+                    
                     i++;
                 }
             }
@@ -100,12 +112,18 @@ public class Peli extends JFrame {
          * Voittoikkuna luokkaa luomaan voittoikkunan.
          * @param pelaaja Voittava pelaaja
          */
-        public void voittaja(Pelaaja pelaaja){
-                frame.setVisible(false);
+        public void voittaja(Pelaaja pelaaja) {
+                
+                
                 Voittoikkuna voittoX = new Voittoikkuna(pelaaja, this);
-                voittoX.luoIkkuna();
+                voittoX.lisaaVoittajaTiedostoon();
+                voittoX.valiIkkuna();
                 System.out.println("Onneksi olkoon " + pelaaja.pelaajanNimi() + "! VOITIT PELIN!");
             
+        }
+        
+        public void suljeIkkuna(){
+            frame.setVisible(false);
         }
         /**
          * Metodi kutsuu tarkista metodeja tarkistamaan voittajaa.

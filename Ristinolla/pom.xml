@@ -39,7 +39,7 @@
             <configuration>
                 <instrumentation>
                     <includes>
-                        
+                        <include>ristinolla.logiikka/*.class</include>                       
                     </includes>
                 </instrumentation>
             </configuration>
@@ -51,12 +51,12 @@
             <version>0.30</version>
             <configuration>
         <targetClasses>
-            <param>ristinollaharkka.ristinolla.Pelaaja*</param>
-            <param>ristinollaharkka.ristinolla.Peli*</param>
+            <param>ristinolla.logiikka.*</param>
+            <param></param>
         </targetClasses>
         <targetTests>
-            <param>ristinollaharkka.ristinolla.Pelaaja*</param>
-            <param>ristinollaharkka.ristinolla.Peli*</param>
+            <param>ristinolla.logiikka.*</param>
+            <param></param>
             
         </targetTests>
     </configuration>

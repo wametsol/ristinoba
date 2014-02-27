@@ -33,7 +33,7 @@ public class Kayttoliittyma {
      * 
      */
     public void run(){
-        frame = new JFrame("Ristinolla");
+        frame = new JFrame("Ristinolla  |Lisää nimi jos haluat sen tallentuvan|");
         frame.setPreferredSize(new Dimension(400, 150));
         
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -41,6 +41,7 @@ public class Kayttoliittyma {
         luoKomponentit(frame.getContentPane());
         
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
     /**

@@ -8,7 +8,7 @@ package kuuntelijat;
  *
  * @author Wade
  * 
- * 
+ * s
  */
 
 //---
@@ -26,8 +26,18 @@ public class XONappi extends JButton implements ActionListener {
     Peli peli;
     public XONappi(Peli peli){
         
-        X = new ImageIcon("X.png");
-        O = new ImageIcon("O.png");
+        if(peli.getVaikeus() == 3){
+        X = new ImageIcon("xHelppo.png");
+        O = new ImageIcon("oHelppo.png");
+        }
+        else if(peli.getVaikeus() == 4){
+        X = new ImageIcon("xNormaali.png");
+        O = new ImageIcon("oNormaali.png");
+        }
+        else if(peli.getVaikeus() == 5){
+        X = new ImageIcon("xVaikea.png");
+        O = new ImageIcon("oVaikea.png");
+        }
         this.addActionListener(this);
         this.peli = peli;
     }
@@ -37,6 +47,10 @@ public class XONappi extends JButton implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(this.getText()!= ""){
+            // Varattu
+        }
+        else{
         int vuoro = peli.getVuoro();
         String kirjain;
         if (vuoro%2==0){
@@ -54,6 +68,10 @@ public class XONappi extends JButton implements ActionListener {
         setText(kirjain);
         peli.tarkistaVoittaja();
         
+        }
         
+    }
+    public void poistaKuuntelija(){
+       // this.setEnabled(false);
     }
 }
