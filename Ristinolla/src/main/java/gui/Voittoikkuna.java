@@ -32,6 +32,12 @@ public class Voittoikkuna {
     private JButton ok, joo, ei, scoret;
     private JFrame valiRuutu, voittoRuutu;
     voittoIkkunanNapinKuuntelija kuuntelija;
+    /**
+     * Konstruktori lisää parametrit oliomuuttujiksi, ja alustaa voittoIkkunan
+     * napinkuuntelijan, ja napit.
+     * @param pelaaja Tuotu pelaaja, eli voittaja.
+     * @param peli Peli joka voitettiin.
+     */
     public Voittoikkuna(Pelaaja pelaaja, Peli peli){
         this.pelaaja = pelaaja;
         this.peli = peli;
@@ -39,10 +45,13 @@ public class Voittoikkuna {
         ok = new JButton("OK");
         joo = new JButton("Uusi peli");
         ei = new JButton("Sulje");
-        scoret = new JButton("Tuloslista (tulossa)");
+        scoret = new JButton("Tuloslista");
         kuuntelija = new voittoIkkunanNapinKuuntelija(this, ok, joo, ei, scoret, voittoRuutu, peli);
         
         }
+    /**
+     * Metodi luo ikkunan johon tulostetaan voittajan nimi.
+     */
     public void valiIkkuna(){
         valiRuutu = new JFrame("Voittaja: " + pelaaja.pelaajanNimi());
         valiRuutu.setPreferredSize(new Dimension(300, 200));

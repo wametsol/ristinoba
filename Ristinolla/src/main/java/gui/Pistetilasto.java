@@ -24,10 +24,18 @@ import javax.swing.WindowConstants;
  */
 public class Pistetilasto {
     private HashMap<String, Integer>pelaajaKartta;
+    /**
+     * Konstruktori luo tuloksia varten HashMapin, johon tiedostoon
+     * lisätyt pelaajat voidaan lisätä ja tulostaa.
+     */
     public Pistetilasto(){
         pelaajaKartta = new HashMap<String, Integer>();
     }
-    
+    /**
+     * Metodi luo pisteiden tulostusta varten ikkunan, kutsuu metodia 
+     * lataaTiedosto() ja lisää pelaajat pelaajaKartta-HashMapista ArrayList:iin.
+     * Tämän jälkeen metodi lisää pelaajat ikkunaan.
+     */
     public void luoIkkuna(){
         JFrame pisteIkkuna = new JFrame("TULOKSET:");
         pisteIkkuna.setPreferredSize(new Dimension(300, 400));
@@ -35,7 +43,7 @@ public class Pistetilasto {
         lataaTiedosto();
         }
         catch (Exception e){
-            
+            System.out.println("Virhe ladattaessa tiedostoa");
         }
 
         Container container = pisteIkkuna.getContentPane();
@@ -60,6 +68,13 @@ public class Pistetilasto {
         pisteIkkuna.setLocationRelativeTo(null);
         pisteIkkuna.setVisible(true);
     }
+    /**Metodi lataa tiedostosta sinne talletettuja nimiä, jotka se lisää 
+     * pelaajaKartta:an, jos pelaajaKarta:ssa on jo kyseinen nimi, lisätään
+     * tälle henkilölle uusi voitto.
+     * 
+     * @throws Exception Metodi heittää Exceptionin jos tiedoston lataaminen
+     * epäonnistuu.
+     */
     public void lataaTiedosto() throws Exception{
         URL url = getClass().getResource("/teksti/scoret.txt");
         File tiedosto;

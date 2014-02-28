@@ -26,13 +26,12 @@ public class XONappi extends JButton implements ActionListener {
     
     
     Peli peli;
+    /** Konstruktori luo nappien kuvat riippuen vaikeusasteesta, jotta
+     * kuvien koko olisi optimaalinen.
+     * 
+     * @param peli Tuotu peli johon napit lisätään
+     */
     public XONappi(Peli peli) {
-        
-        
-//        if(peli.getVaikeus() == 3){
-//        X = new ImageIcon((main.Main.class.getResource("/kuvat/xHelppo.png")));
-//        O = new ImageIcon((main.Main.class.getResource("/kuvat/oHelppo.png")));
-//        }
         if(peli.getVaikeus() == 3){
         X = new ImageIcon((getClass().getResource("/kuvat/xHelppo.png")));
         O = new ImageIcon((getClass().getResource("/kuvat/oHelppo.png")));
@@ -53,7 +52,9 @@ public class XONappi extends JButton implements ActionListener {
             
         
     }
-    /**Kuuntelee napinpainalluksia.
+    /**Kuuntelee napinpainalluksia. Riippuen kumman vuoro on, kuuntelija
+     * lisää nappiin kirjaimen X tai O ja kuvan ja jos painettu nappi on varattu,
+     * kuuntelija ei tee mitään. 
      * 
      * @param e Painettu nappi.
      */
@@ -83,7 +84,5 @@ public class XONappi extends JButton implements ActionListener {
         }
         
     }
-    public void poistaKuuntelija(){
-       // this.setEnabled(false);
-    }
+   
 }

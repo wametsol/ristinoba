@@ -49,3 +49,32 @@ Kesto noin 2 tuntia.
 Tällä viikolla projekti eteni huonommin flunssan takia.
 Tulevana viikonloppuna keskityn koodin siivoamiseen ja testien tekoon.
 -----------------
+16.2.2014
+Pikku säätöjä koodin kanssa
+Kesto noin 2 tuntia
+-----------------
+17.2.2014
+Iso muutos voittajien tarkastamiseen sekä kuvien lisääminen näppäimiin. Peli toimii jo melko hyvin.
+Kesto noin 4 tuntia.
+-----------------
+19.2.2014
+Käyttöliittymän hiomista ja pientä säätöä koodin kanssa.
+Kesto noin 2 tuntia.
+-----------------
+24.2.2014
+Tuloslistan lisääminen ja sen toimintaan liittyvät muutokset.
+Kesto noin 2 tuntia.
+-----------------
+26.2.2014 
+Yhteensopivuusongelmia Linuxin ja jarin toiminnassa, näiden kanssa virittelyä
+Kesto noin 5 tuntia.
+-----------------
+27.2.2014 
+Samojen ongelmien kanssa painiminen, ohjelma toimii Jar tiedostona omalla koneella normaalisti.
+Kesto noin 3 tuntia.
+-----------------
+28.2.2014
+Edelleen ongelmia jar:in kanssa, valittaa ettei main -luokkaa löydy, enkä löydä syytä miksi(linux, ei kotikone).
+Ohjelma toimii edelleen omalla koneella jar-tiedostona. Projekti kääntyy normaalisti linuxilla.
+Kesto noin 6 tuntia....
+-----------------

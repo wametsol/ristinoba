@@ -1,0 +1,33 @@
+AIHE: Ristinolla
+
+Toteutetaan harjoitustyönä ristinolla peli, jossa kaksi pelaajaa voi pelata vastakkain eri vaikeusasteilla.
+Peli etenee pelaajien valintojen mukaan, luoden 3x3, 8x8 tai 12x12 ruudukon. Peli tallentaa automaattisesti
+nimet jos ne on syötetty. Halutessaan pelin jälkeen voi valita uuden pelin, sulkea ohjelman tai tulostaa
+listan voittajista.
+KÄYTTÄJÄT: Kaksi pelaajaa
+
+TOIMINNOT: 
+--------
+*Pelaajien nimien lisääminen
+*Vaikeusasteen valinta(3,4,5)
+*Pelaaminen vuorotellen.
+*Tuloslista (Sisältäen nimen + pelatut pelit yms.)
+
+
+
+
+
+Ohjelma alkaa kutsumalla Käyttöliittymän run -metodia.
+Metodi alustaa ikkunaa, kutsuu luoKomponentit -metodia ja luo ikkunan näkyväksi.
+
+Ohjelma lähtee etenemään kun jokin kolmesta napista on painettu. Napinkuuntelija luo pelaajat
+annettujen nimien mukaan, luo uuden pelin, riippuen vaikeusasteesta ja kutsuu pelin metodia luoPeli.
+
+Peli luo ikkunan, ja lisää siihen XONapit riippuen vaikeusasteesta.Tämän jälkeen metodi tuo ikkunan
+näkyväksi ja itse peli voi alkaa. Nappeja painellessa niiden kuvat sekä kirjain muuttuvat, ja jokaisen
+napinpainalluksen jälkeen, peli kutsuu tarkista-metodeja, jotka tarkastavat jokaisen mahdollisen voiton.
+Kun voitto löytyy, ilmoittaa peli siitä luomalla ikkunan johon tulostetaan voittajan nimi ja OK painike.
+Kun nappia painetaan, aukeaa voittoIkkuna, jossa on mahdollista valita joko Uusi peli, jolloin siirrytään
+takaisin ensimmäiseen ikkunaan. Painettaessa Tuloslistaa tulostetaan uuteen ikkunaan Pelaajia ja heidän
+voittojaan. Painettaessa Sulje, koko ohjelma sammutetaan.
+

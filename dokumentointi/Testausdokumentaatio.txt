@@ -1,0 +1,15 @@
+TESTAUSDOKUMENTAATIO
+
+Olen testannut ohjelman tarkastamista automaattisilla testeillä, jotka testaavat voittajienTarkistus 
+-metodien toimintaa ja niiden palautusarvoja. Testit testaavat onko mahdollista voittaa, sekä
+onko mahdollista olla voittamatta(ettei jokainen rivi voita). 
+
+Käyttöliittymää ja sen toimintaa olen testannut käsin. Olen yrittänyt testata kaikkia mahdollisia
+tapauksia, miten käyttäjä voi kaataa/sekoittaa pelin. Käyttöliittymään tekemieni muutoksien jälkeen
+olen pyrkinyt joka kerta testaamaan muutosten toiminnan ja seuraukset. Isompien muutosten jälkeen olen
+kokeillut toimintaa myös muilla koneilla, ja tehnyt tarvittavia muutoksia koodin rakenteeseen.
+
+
+
+.jar tiedostoa luodessa tuli ongelmia. Tiedosto toimii hyvin omalla koneella, mutta linuxilla se
+valittaa ettei main - luokkaa löydy, enkä onnistunut löytämään syytä miksi.

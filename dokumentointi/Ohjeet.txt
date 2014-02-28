@@ -1,0 +1,16 @@
+|RISTINOLLA|
+
+OHJEET
+
+1. Vapaavalintainen nimien syöttö. Peli tallentaa voitot automaattisesti vain jos nimi on syötetty.
+
+2. Valitse vaikeustaso;
+ - Helppo on 3x3 ruudun kokoinen alue, jossa pelaaja joka ensimmäisenä saa kolmen suoran voittaa.
+ - Normaali on 8x8 ruudun kokoinen alue, jossa pelaaja joka ensimmäisenä saa neljän suoran voittaa.
+ - Vaikea on 12x12 ruudun kokoinen alue, jossa pelaaja joka ensimmäisenä saa viiden suoran voittaa.
+
+4. Pelin toiminta: Pelaajat painavat vuorotellen painikkeita hiirellä, ja pelilauta avaa painikkeeseen
+joko X:n tai O:n kuvan, riippuen pelaajien vuoroista.
+
+3. Pelaajan voitettua pelin, ilmoitetaan voittaja ja sen jälkeen kysytään pelataanko uudestaan, suljetaanko
+peli vai tulostetaanko lista pelaajista ja heidän voitoista.
