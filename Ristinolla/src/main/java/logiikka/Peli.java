@@ -46,6 +46,7 @@ public class Peli extends JFrame {
         
         frame.pack();
         frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
         frame.setVisible(true);
     
 
@@ -61,9 +62,11 @@ public class Peli extends JFrame {
          */
         public void luoKomponentit(Container container){
             this.nappeja = new XONappi[144];
+           
             if (vaikeus == 3){
             GridLayout layout = new GridLayout(3,3);
             container.setLayout(layout);
+            
             int i = 0;
             while (i<9){
                
@@ -95,6 +98,7 @@ public class Peli extends JFrame {
                     i++;
                 }
             }
+            
             
            
         }

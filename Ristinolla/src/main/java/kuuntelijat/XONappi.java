@@ -12,7 +12,9 @@ package kuuntelijat;
  */
 
 //---
+import java.awt.Toolkit;
 import logiikka.Peli;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -24,20 +26,23 @@ public class XONappi extends JButton implements ActionListener {
     
     
     Peli peli;
-    public XONappi(Peli peli){
+    public XONappi(Peli peli) {
+        
         
         if(peli.getVaikeus() == 3){
-        X = new ImageIcon("xHelppo.png");
-        O = new ImageIcon("oHelppo.png");
+        X = new ImageIcon((main.Main.class.getResource("/kuvat/xHelppo.png")));
+        O = new ImageIcon((main.Main.class.getResource("/kuvat/oHelppo.png")));
         }
         else if(peli.getVaikeus() == 4){
-        X = new ImageIcon("xNormaali.png");
-        O = new ImageIcon("oNormaali.png");
+        X = new ImageIcon((main.Main.class.getResource("/kuvat/xNormaali.png")));
+        O = new ImageIcon((main.Main.class.getResource("/kuvat/oNormaali.png")));
         }
         else if(peli.getVaikeus() == 5){
-        X = new ImageIcon("xVaikea.png");
-        O = new ImageIcon("oVaikea.png");
+        X = new ImageIcon((main.Main.class.getResource("/kuvat/xVaikea.png")));
+        O = new ImageIcon((main.Main.class.getResource("/kuvat/oVaikea.png")));
         }
+        
+        
         this.addActionListener(this);
         this.peli = peli;
     }

@@ -104,7 +104,7 @@ public class Voittoikkuna {
             FileWriter kirjoittaja = null;
             
             try{
-                kirjoittaja = new FileWriter("scoret.txt", true);
+                kirjoittaja = new FileWriter("/C:/WADE-PC/Users/Wade/.ssh/ristinoba/Ristinolla/target/classes/teksti/scoret.txt", true);
                 
                 
             }

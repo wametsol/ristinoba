@@ -3,13 +3,13 @@
  * and open the template in the editor.
  */
 package gui;
-
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -31,26 +31,13 @@ public class Pistetilasto {
     public void luoIkkuna(){
         JFrame pisteIkkuna = new JFrame("TULOKSET:");
         pisteIkkuna.setPreferredSize(new Dimension(300, 400));
-       
+        try{
         lataaTiedosto();
-//        JPanel paneeli1 = new JPanel(new GridLayout(1,1)){
-//            @Override
-//           public void paintComponent(Graphics g){
-//               g.drawLine(0, 250, 800, 250);
-//               g.drawLine(291, 250, 291, 0);
-//           } 
-//            
-//        };
-//        
-//        paneeli1.add(new JLabel("Pelaajat"));
-//        
-//        JPanel paneeli2 = new JPanel(new GridLayout(2,1)){
-//            @Override
-//            public void paintComponent(Graphics g){
-//                g.drawLine(291, 250, 500, 250);
-//            }
-//        };
-//        paneeli2.add(new JLabel("Voitot"));
+        }
+        catch (Exception e){
+            
+        }
+
         Container container = pisteIkkuna.getContentPane();
         GridLayout layout = new GridLayout(10,1);
         container.setLayout(layout);
@@ -62,7 +49,9 @@ public class Pistetilasto {
             pelaajaLista.add(pelaaja + " : " + pelaajaKartta.get(pelaaja) + " voittoa.");
             
         }
+        if (!pelaajaLista.isEmpty()){
         pelaajaLista.remove(pelaajaLista.size()-1);
+        }
         
         
         for (String pelaaja : pelaajaLista){
@@ -77,14 +66,15 @@ public class Pistetilasto {
         pisteIkkuna.setLocationRelativeTo(null);
         pisteIkkuna.setVisible(true);
     }
-    public void lataaTiedosto(){
-        File tiedosto = new File("scoret.txt");
+    public void lataaTiedosto() throws Exception{
+        URL url = main.Main.class.getResource("/teksti/scoret.txt");
+        File tiedosto;
         Scanner lukija = null;
-        try{ 
-            lukija = new Scanner(tiedosto);
-        }
-        catch(Exception e){
-        }
+        
+        tiedosto = new File(url.toURI());
+        lukija = new Scanner(tiedosto);
+        
+        try{
         while(lukija.hasNextLine()){
             String rivi = lukija.nextLine();
             if (rivi == ""){
@@ -101,6 +91,10 @@ public class Pistetilasto {
                 pelaajaKartta.put(rivi, 1);
             }
             }
+        }
+        }
+        catch(Exception e){
+            System.out.println((main.Main.class.getResource("/kuvat/xVaikea.png")));
         }
         
     }
