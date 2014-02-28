@@ -29,22 +29,29 @@ public class XONappi extends JButton implements ActionListener {
     public XONappi(Peli peli) {
         
         
+//        if(peli.getVaikeus() == 3){
+//        X = new ImageIcon((main.Main.class.getResource("/kuvat/xHelppo.png")));
+//        O = new ImageIcon((main.Main.class.getResource("/kuvat/oHelppo.png")));
+//        }
         if(peli.getVaikeus() == 3){
-        X = new ImageIcon((main.Main.class.getResource("/kuvat/xHelppo.png")));
-        O = new ImageIcon((main.Main.class.getResource("/kuvat/oHelppo.png")));
+        X = new ImageIcon((getClass().getResource("/kuvat/xHelppo.png")));
+        O = new ImageIcon((getClass().getResource("/kuvat/oHelppo.png")));
         }
         else if(peli.getVaikeus() == 4){
-        X = new ImageIcon((main.Main.class.getResource("/kuvat/xNormaali.png")));
-        O = new ImageIcon((main.Main.class.getResource("/kuvat/oNormaali.png")));
+        X = new ImageIcon((getClass().getResource("/kuvat/xNormaali.png")));
+        O = new ImageIcon((getClass().getResource("/kuvat/oNormaali.png")));
         }
         else if(peli.getVaikeus() == 5){
-        X = new ImageIcon((main.Main.class.getResource("/kuvat/xVaikea.png")));
-        O = new ImageIcon((main.Main.class.getResource("/kuvat/oVaikea.png")));
+        X = new ImageIcon((getClass().getResource("/kuvat/xVaikea.png")));
+        O = new ImageIcon((getClass().getResource("/kuvat/oVaikea.png")));
         }
         
         
         this.addActionListener(this);
         this.peli = peli;
+        
+            
+        
     }
     /**Kuuntelee napinpainalluksia.
      * 

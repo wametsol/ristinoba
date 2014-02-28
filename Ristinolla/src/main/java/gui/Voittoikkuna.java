@@ -9,7 +9,9 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.io.File;
 import java.io.FileWriter;
+import java.net.URL;
 import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -102,6 +104,8 @@ public class Voittoikkuna {
             }
             else{
             FileWriter kirjoittaja = null;
+            URL url = getClass().getResource("/teksti/scoret.txt");
+            File tiedosto;
             
             try{
                 kirjoittaja = new FileWriter("/C:/WADE-PC/Users/Wade/.ssh/ristinoba/Ristinolla/target/classes/teksti/scoret.txt", true);

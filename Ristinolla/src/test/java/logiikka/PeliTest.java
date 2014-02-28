@@ -22,7 +22,7 @@ import logiikka.Peli;
 public class PeliTest {
     
     Pelaaja yksi,kaksi;
-    Peli peli1,peli2,peli3;
+    Peli peliNormaali,peliHelppo,peliVaikea;
     public PeliTest() {
         
     }
@@ -39,12 +39,12 @@ public class PeliTest {
     public void setUp() {
         yksi = new Pelaaja("ykkonen");
         kaksi = new Pelaaja("kakkonen");
-        peli2 = new Peli(3, yksi, kaksi);
-        peli1 = new Peli(4, yksi, kaksi);
-        peli3 = new Peli(5, yksi, kaksi);
-        peli1.luoPeli();
-        peli2.luoPeli();
-        peli3.luoPeli();
+        peliHelppo = new Peli(3, yksi, kaksi);
+        peliNormaali = new Peli(4, yksi, kaksi);
+        peliVaikea = new Peli(5, yksi, kaksi);
+        peliNormaali.luoPeli();
+        peliHelppo.luoPeli();
+        peliVaikea.luoPeli();
     }
     
     @After
@@ -53,97 +53,97 @@ public class PeliTest {
     
     @Test
     public void tarkistaNormaaliVaakaEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli1.tarkistaNormaaliVaaka("X"),false);
-        assertEquals(peli1.tarkistaNormaaliVaaka("O"),false);
+        assertEquals(peliNormaali.tarkistaNormaaliVaaka("X"),false);
+        assertEquals(peliNormaali.tarkistaNormaaliVaaka("O"),false);
     }
     @Test
     public void tarkistaNormaaliPystyEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli1.tarkistaNormaaliPysty("X"),false);
-        assertEquals(peli1.tarkistaNormaaliPysty("O"),false);
+        assertEquals(peliNormaali.tarkistaNormaaliPysty("X"),false);
+        assertEquals(peliNormaali.tarkistaNormaaliPysty("O"),false);
     }
     @Test
     public void tarkistaNormaaliVinoEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli1.tarkistaNormaaliVino("X"),false);
-        assertEquals(peli1.tarkistaNormaaliVino("O"),false);
+        assertEquals(peliNormaali.tarkistaNormaaliVino("X"),false);
+        assertEquals(peliNormaali.tarkistaNormaaliVino("O"),false);
     }
     @Test
     public void tarkistaHelppoVaakaEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli2.tarkistaHelppoVaaka("X"),false);
-        assertEquals(peli2.tarkistaHelppoVaaka("O"),false);
+        assertEquals(peliHelppo.tarkistaHelppoVaaka("X"),false);
+        assertEquals(peliHelppo.tarkistaHelppoVaaka("O"),false);
     }
     @Test
     public void tarkistaHelppoPystyEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli2.tarkistaHelppoPysty("X"),false);
-        assertEquals(peli2.tarkistaHelppoPysty("O"),false);
+        assertEquals(peliHelppo.tarkistaHelppoPysty("X"),false);
+        assertEquals(peliHelppo.tarkistaHelppoPysty("O"),false);
     }
     @Test
     public void tarkistaHelppoVinoEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli2.tarkistaHelppoVino("X"),false);
-        assertEquals(peli2.tarkistaHelppoVino("O"),false);
+        assertEquals(peliHelppo.tarkistaHelppoVino("X"),false);
+        assertEquals(peliHelppo.tarkistaHelppoVino("O"),false);
     }
     @Test
     public void tarkistaVaikeaPystyEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli3.tarkistaVaikeaPysty("X"),false);
-        assertEquals(peli3.tarkistaVaikeaPysty("O"),false);
+        assertEquals(peliVaikea.tarkistaVaikeaPysty("X"),false);
+        assertEquals(peliVaikea.tarkistaVaikeaPysty("O"),false);
     }
     @Test
     public void tarkistaVaikeaVaakaEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli3.tarkistaVaikeaVaaka("X"),false);
-        assertEquals(peli3.tarkistaVaikeaVaaka("O"),false);
+        assertEquals(peliVaikea.tarkistaVaikeaVaaka("X"),false);
+        assertEquals(peliVaikea.tarkistaVaikeaVaaka("O"),false);
     }
     @Test
     public void tarkistaVaikeaVinoEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli3.tarkistaVaikeaVino("X"),false);
-        assertEquals(peli3.tarkistaVaikeaVino("O"),false);
+        assertEquals(peliVaikea.tarkistaVaikeaVino("X"),false);
+        assertEquals(peliVaikea.tarkistaVaikeaVino("O"),false);
     }
     @Test
     public void tarkistaEiVoittojaTyhjallaPelilla(){
-        assertEquals(peli1.tarkista("X"),false);
-        assertEquals(peli1.tarkista("O"),false);
-        assertEquals(peli2.tarkista("X"),false);
-        assertEquals(peli2.tarkista("O"),false);
-        assertEquals(peli3.tarkista("X"),false);
-        assertEquals(peli3.tarkista("O"),false);
+        assertEquals(peliNormaali.tarkista("X"),false);
+        assertEquals(peliNormaali.tarkista("O"),false);
+        assertEquals(peliHelppo.tarkista("X"),false);
+        assertEquals(peliHelppo.tarkista("O"),false);
+        assertEquals(peliVaikea.tarkista("X"),false);
+        assertEquals(peliVaikea.tarkista("O"),false);
     }
     @Test
     public void tarkistaVoittaminenToimii(){
-        assertEquals(peli1.tarkista(""),true);
+        assertEquals(peliNormaali.tarkista(""),true);
     }
     @Test
     public void tarkistaHelppoVaakaToimii(){
-        assertEquals(peli1.tarkistaHelppoVaaka(""),true);
+        assertEquals(peliNormaali.tarkistaHelppoVaaka(""),true);
     }
     @Test
     public void tarkistaHelppoPystyToimii(){
-        assertEquals(peli1.tarkistaHelppoPysty(""),true);
+        assertEquals(peliNormaali.tarkistaHelppoPysty(""),true);
     }
     @Test
     public void tarkistaHelppoVinoToimii(){
-        assertEquals(peli1.tarkistaHelppoVino(""),true);
+        assertEquals(peliNormaali.tarkistaHelppoVino(""),true);
     }
     @Test
     public void tarkistaNormaaliVaakaToimii(){
-        assertEquals(peli1.tarkistaNormaaliVaaka(""),true);
+        assertEquals(peliNormaali.tarkistaNormaaliVaaka(""),true);
     }
     @Test
     public void tarkistaNormaaliPystyToimii(){
-        assertEquals(peli1.tarkistaNormaaliPysty(""),true);
+        assertEquals(peliNormaali.tarkistaNormaaliPysty(""),true);
     }
     @Test
     public void tarkistaNormaaliVainoToimii(){
-        assertEquals(peli1.tarkistaNormaaliVino(""),true);
+        assertEquals(peliNormaali.tarkistaNormaaliVino(""),true);
     }
     @Test
     public void tarkistaVaikeaVaakaToimii(){
-        assertEquals(peli1.tarkistaVaikeaVaaka(""),true);
+        assertEquals(peliNormaali.tarkistaVaikeaVaaka(""),true);
     }
     @Test
     public void tarkistaVaikeaPystyToimii(){
-        assertEquals(peli1.tarkistaVaikeaPysty(""),true);
+        assertEquals(peliNormaali.tarkistaVaikeaPysty(""),true);
     }
     @Test
     public void tarkistaVaikeaVinoToimii(){
-        assertEquals(peli1.tarkistaVaikeaVino(""),true);
+        assertEquals(peliNormaali.tarkistaVaikeaVino(""),true);
     }
     }
     

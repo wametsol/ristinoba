@@ -41,38 +41,32 @@ public class Pistetilasto {
         Container container = pisteIkkuna.getContentPane();
         GridLayout layout = new GridLayout(10,1);
         container.setLayout(layout);
-        //container.add(new JLabel("Top 10"));
         ArrayList<String> pelaajaLista = new ArrayList<String>();
         
         
         for (String pelaaja : pelaajaKartta.keySet()){
+            if(pelaaja.equals("")){
+                
+            }
+            else{
             pelaajaLista.add(pelaaja + " : " + pelaajaKartta.get(pelaaja) + " voittoa.");
+            }
             
         }
-        if (!pelaajaLista.isEmpty()){
-        pelaajaLista.remove(pelaajaLista.size()-1);
-        }
-        
-        
         for (String pelaaja : pelaajaLista){
             container.add(new JLabel(pelaaja));
         }
-        
-        
-        
-        
-        
         pisteIkkuna.pack();
         pisteIkkuna.setLocationRelativeTo(null);
         pisteIkkuna.setVisible(true);
     }
     public void lataaTiedosto() throws Exception{
-        URL url = main.Main.class.getResource("/teksti/scoret.txt");
+        URL url = getClass().getResource("/teksti/scoret.txt");
         File tiedosto;
         Scanner lukija = null;
         
         tiedosto = new File(url.toURI());
-        lukija = new Scanner(tiedosto);
+        lukija = new Scanner(tiedosto, "UTF-8");
         
         try{
         while(lukija.hasNextLine()){
@@ -94,7 +88,7 @@ public class Pistetilasto {
         }
         }
         catch(Exception e){
-            System.out.println((main.Main.class.getResource("/kuvat/xVaikea.png")));
+            System.out.println("Virhe pistetilaston latauksessa");
         }
         
     }

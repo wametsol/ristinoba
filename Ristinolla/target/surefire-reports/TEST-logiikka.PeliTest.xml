@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="2.626" errors="0" skipped="0" tests="20" name="logiikka.PeliTest">
+<testsuite failures="0" time="2.603" errors="0" skipped="0" tests="20" name="logiikka.PeliTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin"/>
@@ -43,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_25\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="fi"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,24 +60,24 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.29" classname="logiikka.PeliTest" name="tarkistaHelppoVaakaEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.174" classname="logiikka.PeliTest" name="tarkistaHelppoPystyEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.178" classname="logiikka.PeliTest" name="tarkistaHelppoVinoEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.191" classname="logiikka.PeliTest" name="tarkistaVaikeaPystyEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.231" classname="logiikka.PeliTest" name="tarkistaVaikeaVaakaEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.19" classname="logiikka.PeliTest" name="tarkistaVaikeaVinoEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.168" classname="logiikka.PeliTest" name="tarkistaEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.107" classname="logiikka.PeliTest" name="tarkistaNormaaliVaakaEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.094" classname="logiikka.PeliTest" name="tarkistaNormaaliPystyEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.09" classname="logiikka.PeliTest" name="tarkistaNormaaliVinoEiVoittojaTyhjallaPelilla"/>
-  <testcase time="0.098" classname="logiikka.PeliTest" name="tarkistaNormaaliVaakaToimii"/>
-  <testcase time="0.09" classname="logiikka.PeliTest" name="tarkistaVaikeaVinoToimii"/>
-  <testcase time="0.097" classname="logiikka.PeliTest" name="tarkistaNormaaliPystyToimii"/>
-  <testcase time="0.094" classname="logiikka.PeliTest" name="tarkistaVaikeaPystyToimii"/>
-  <testcase time="0.089" classname="logiikka.PeliTest" name="tarkistaVaikeaVaakaToimii"/>
-  <testcase time="0.089" classname="logiikka.PeliTest" name="tarkistaNormaaliVainoToimii"/>
-  <testcase time="0.095" classname="logiikka.PeliTest" name="tarkistaHelppoVinoToimii"/>
-  <testcase time="0.088" classname="logiikka.PeliTest" name="tarkistaHelppoPystyToimii"/>
+  <testcase time="0.299" classname="logiikka.PeliTest" name="tarkistaHelppoVaakaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.186" classname="logiikka.PeliTest" name="tarkistaHelppoPystyEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.189" classname="logiikka.PeliTest" name="tarkistaHelppoVinoEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.209" classname="logiikka.PeliTest" name="tarkistaVaikeaPystyEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.197" classname="logiikka.PeliTest" name="tarkistaVaikeaVaakaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.188" classname="logiikka.PeliTest" name="tarkistaVaikeaVinoEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.136" classname="logiikka.PeliTest" name="tarkistaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.121" classname="logiikka.PeliTest" name="tarkistaNormaaliVaakaToimii"/>
+  <testcase time="0.089" classname="logiikka.PeliTest" name="tarkistaVaikeaVinoToimii"/>
+  <testcase time="0.091" classname="logiikka.PeliTest" name="tarkistaNormaaliPystyToimii"/>
+  <testcase time="0.093" classname="logiikka.PeliTest" name="tarkistaVaikeaPystyToimii"/>
+  <testcase time="0.096" classname="logiikka.PeliTest" name="tarkistaVaikeaVaakaToimii"/>
+  <testcase time="0.1" classname="logiikka.PeliTest" name="tarkistaNormaaliVainoToimii"/>
+  <testcase time="0.082" classname="logiikka.PeliTest" name="tarkistaHelppoVinoToimii"/>
+  <testcase time="0.085" classname="logiikka.PeliTest" name="tarkistaHelppoPystyToimii"/>
   <testcase time="0.084" classname="logiikka.PeliTest" name="tarkistaHelppoVaakaToimii"/>
-  <testcase time="0.083" classname="logiikka.PeliTest" name="tarkistaVoittaminenToimii"/>
+  <testcase time="0.093" classname="logiikka.PeliTest" name="tarkistaVoittaminenToimii"/>
+  <testcase time="0.083" classname="logiikka.PeliTest" name="tarkistaNormaaliVaakaEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.086" classname="logiikka.PeliTest" name="tarkistaNormaaliPystyEiVoittojaTyhjallaPelilla"/>
+  <testcase time="0.091" classname="logiikka.PeliTest" name="tarkistaNormaaliVinoEiVoittojaTyhjallaPelilla"/>
 </testsuite>
