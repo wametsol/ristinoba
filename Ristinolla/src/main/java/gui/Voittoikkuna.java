@@ -105,10 +105,11 @@ public class Voittoikkuna {
             else{
             FileWriter kirjoittaja = null;
             URL url = getClass().getResource("/teksti/scoret.txt");
-            File tiedosto;
+            
             
             try{
-                kirjoittaja = new FileWriter("/C:/WADE-PC/Users/Wade/.ssh/ristinoba/Ristinolla/target/classes/teksti/scoret.txt", true);
+                File tiedosto = new File(url.toURI());
+                kirjoittaja = new FileWriter(tiedosto, true);
                 
                 
             }
